@@ -2,22 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  let posts = 'Vancouver based full-stact developer'
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="black-nav">
+        <div style={{color:'lavender', fontSize:'30pt'}}>Blog by React</div>
+      </div>
+      <img src= {logo} alt="logo" />
+      <h4> {posts} </h4>
     </div>
   );
 }
