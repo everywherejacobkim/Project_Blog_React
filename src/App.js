@@ -52,8 +52,21 @@ function App() {
       
       <button onClick={titleChange}>Button</button>
 
+      <Modal/>
+
     </div>
   );
+}
+
+function Modal() {
+  return (
+    <div className='modal'>
+        <h2>Title</h2>
+        <p>Date</p>
+        <p>Detail</p>
+    </div>
+  )
+  
 }
 
 export default App;

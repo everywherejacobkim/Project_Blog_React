@@ -32,6 +32,16 @@ button {
   font-weight: 600;
 }
 
+.modal {
+  padding: 20px;
+  background: #eee;
+  margin-top: 30px;
+  
+}
+
+
+
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -66,4 +76,4 @@ button {
   to {
     transform: rotate(360deg);
   }
-}
+} */
