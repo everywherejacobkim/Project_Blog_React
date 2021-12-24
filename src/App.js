@@ -11,6 +11,8 @@ function App() {
   let [good, goodEdit] = useState(0);
   let [title3, titleEdit3] = useState('Women Coat Review');
 
+  let [modal, modalEdit] = useState(false);
+
   let posts = 'Vancouver based full-stack developer'
 
   function titleChange() {
@@ -27,7 +29,7 @@ function App() {
       </div>
       
       <div className="list">
-        <h3> {title[0]} <span onClick={()=>{ goodEdit(good+1) }}>👍</span> {good} </h3>
+        <h3> {title[0]} <span onClick={() => { goodEdit(good+1) }}>👍</span> {good} </h3>
         <p>Published by December 2021</p>
         <hr/>
       </div>
@@ -50,10 +52,17 @@ function App() {
         <hr/>
       </div>
       
-      <button onClick={titleChange}>Button</button>
+      <button onClick={titleChange}>Change</button>
 
-      <Modal/>
+      <button onClick={() => modalEdit(true)}>Open</button>
+      <button onClick={() => modalEdit(false)}>Close</button>
 
+      {
+        modal === true
+        ? <Modal/>
+        : null
+      }
+     
     </div>
   );
 }
