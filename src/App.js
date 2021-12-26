@@ -13,6 +13,16 @@ function App() {
 
   let [modal, modalEdit] = useState(false);
 
+
+  // array_map_function
+  let array = [2,3,4];
+  let newArray = array.map((a)=>{
+    return a * 2
+  });
+  console.log(newArray);
+  //
+
+
   let posts = 'Vancouver based full-stack developer'
 
   function titleChange() {
@@ -51,26 +61,39 @@ function App() {
         <p>Published by December 2021</p>
         <hr/>
       </div>
-      
-      <button onClick={titleChange}>Change</button>
 
+
+    {/* {
+      title.map((a) => {
+       return (
+        <div className="list">
+        <h3> {a} </h3>
+        <p>Published by December 2021</p>
+        <hr/>
+        </div>
+        )
+      })
+    }   */}
+
+
+      <button onClick={titleChange}>Change</button>
       <button onClick={() => modalEdit(true)}>Open</button>
       <button onClick={() => modalEdit(false)}>Close</button>
 
       {
         modal === true
-        ? <Modal/>
+        ? <Modal title={title} ></Modal>
         : null
       }
      
     </div>
   );
 }
-
-function Modal() {
+ 
+function Modal(props) {
   return (
     <div className='modal'>
-        <h2>Title</h2>
+        <h2>{props.title[0]}</h2>
         <p>Date</p>
         <p>Detail</p>
     </div>
