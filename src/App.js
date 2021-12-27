@@ -13,6 +13,7 @@ function App() {
 
   let [modal, modalEdit] = useState(false);
 
+  let [userInput, userInputEdit] =useState('');
 
   // array_map_function
   let array = [2,3,4];
@@ -63,6 +64,7 @@ function App() {
       </div>
 
 
+
     {/* {
       title.map((a) => {
        return (
@@ -76,6 +78,11 @@ function App() {
     }   */}
 
 
+      {/* <input type="text" onChange={(e)=>{
+        userInputEdit(e.target.value);
+      }}/> <br /> */}
+
+      
       <button onClick={titleChange}>Change</button>
       <button onClick={() => modalEdit(true)}>Open</button>
       <button onClick={() => modalEdit(false)}>Close</button>
@@ -85,6 +92,18 @@ function App() {
         ? <Modal title={title} ></Modal>
         : null
       }
+
+
+      <div className='publish'>
+        <input type="text" onChange={(e) => {
+          userInputEdit(e.target.value)
+        }}/>
+        <button onClick={()=>{
+          let arrayCopy = [...title];
+          arrayCopy.unshift(userInput);
+          titleEdit(arrayCopy);
+        }}>Add Post</button>
+      </div>
      
     </div>
   );

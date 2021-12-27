@@ -34,6 +34,29 @@ button {
   font-weight: 600;
 }
 
+.publish {
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+.publish input {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 70%;
+  border: 1px solid grey;
+}
+
+.publish button {
+  display: inline;
+  width: auto;
+  margin: auto;
+  margin-top: 20px;
+  background-color: rgb(223, 138, 180);
+  transform: translateX(3px);
+}
+
 .modal {
   padding: 20px;
   background: #eee;
